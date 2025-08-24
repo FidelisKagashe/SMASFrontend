@@ -1,0 +1,77 @@
+/* Fonts */
+$font-family: "Source Sans Pro";
+$font-size: 1rem; // 14px / 16px
+$heading-font-size: 1.125rem; // 18px / 16px
+$sub-heading-font-size: 1rem; // 16px / 16px
+$caption-font-size: 0.875rem; // 12px / 16px
+$title-font-size: $heading-font-size;
+$font-weight-bold: 600;
+$font-weight-semibold: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$icon-font-size: 1.375rem; // 22px / 16px
+$sm-icon-font-size: 1.25rem; // 20px / 16px
+$space: 1rem; // 16px / 16px
+
+/* Layout Sizes */
+$sidebar-width: 15.625rem; // 250px / 16px
+$header-height: 3.75rem; // 60px / 16px
+$border-radius: 1rem; // 10px / 16px
+$box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.1); // 5px / 16px
+$card-padding: 0.9375rem; // 1.5rem / 16px
+$badge-height: 2rem; // 32px / 16px
+$table-header-height: 3.75rem; // 60px / 16px
+$table-data-height: 3.4375rem; // 55px / 16px
+$scrollbar-size: 0.5rem; // 8px / 16px
+
+/* Animations */
+$fade-in-animation: fadeIn 0s ease-in-out;
+$transition: background-color ease 0.3s;
+$page-animation: fadeIn 0s;
+$slide-in-animation: slideIn 0s ease-in-out;
+$rotate-animation: rotate;
+$pop-animation: pop 0s ease-in-out;
+$bell-shake-animation: bellShake 2.5s infinite;
+
+/* Inputs */
+$button-border-radius: $border-radius;
+$input-margin: 0.5rem; // 8px / 16px
+$input-height: 3.125rem; // 50px / 16px
+$input-padding: 1rem; // 16px / 16px
+$input-border-radius: 0.25rem; // 4px / 16px
+$button-height: $input-height;
+$button-padding: $input-padding;
+$button-box-shadow: 0 0 0 0.5rem rgba(0, 0, 0, 0.1); // 8px / 16px
+$checkbox-size: 1rem; // 16px / 16px
+
+$divider: 0.125rem solid $background-color; // 2px / 16px
+
+/* Margin and Padding */
+$margin: 1.5rem; // 16px / 16px
+$padding: $margin;
+$no-margin: 0 !important;
+$no-padding: $no-margin;
+
+/* Screen Width Above */
+$small-screen-up: 37.5rem; // 600px / 16px
+$medium-screen-up: 62rem; // 992px / 16px
+$large-screen-up: 75.0625rem; // 1201px / 16px
+
+/* Screen With Below */
+$small-screen: 37.5rem; // 600px / 16px
+$medium-screen: 62rem; // 992px / 16px
+$large-screen: 75.0625rem; // 1201px / 16px
+
+/* Screen Condition */
+$medium-and-up: "only screen and (min-width: #{$small-screen-up})";
+$large-and-up: "only screen and (min-width: #{$medium-screen-up})";
+$extra-large-and-up: "only screen and (min-width: #{$large-screen-up})";
+$small-and-down: "only screen and (max-width: #{$small-screen})";
+$medium-and-down: "only screen and (max-width: #{$medium-screen})";
+$medium-only: "only screen and (min-width: #{$small-screen-up}) and (max-width: #{$medium-screen})";
+
+/* Grid */
+$num-cols: 12;
+$gutter-width: 1.25rem; // 20px / 16px
+$element-top-margin: 0.416666667rem; // 6.666666667px / 16px
+$element-bottom-margin: 0.833333333rem; // 13.333333333px / 16px

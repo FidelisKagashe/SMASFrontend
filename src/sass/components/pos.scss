@@ -1,0 +1,113 @@
+.pos-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .pos-menu-item {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: $margin;
+        margin-left: $margin;
+        border-radius: $border-radius;
+        background-color: $card-background-color;
+        box-shadow: $box-shadow;
+
+        &:hover {
+            background-color: $primary-color;
+            transition: $transition;
+
+            i {
+                color: $light-color;
+
+            }
+
+            .title {
+                color: $light-color;
+            }
+        }
+
+        i {
+            // width: 80px;
+            height: 90px;
+            font-size: 40px;
+            color: $primary-color;
+        }
+
+        .title {
+            color: $label-color;
+            text-align: center;
+            font-size: $font-size;
+            font-weight: $font-weight-semibold;
+        }
+    }
+}
+
+$body-margin: calc(#{$header-height} + #{$margin});
+
+#pos {
+    margin: 0 $body-margin;
+    margin-top: $body-margin;
+
+}
+
+.pos-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 996;
+    width: 100%;
+    height: calc($header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: $page-animation;
+    transition: $transition;
+    background-color: $primary-color;
+
+    .section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: $transition;
+        padding: $space;
+
+        i {
+            font-size: 2em;
+            color: $light-color;
+            margin-right: 0.5rem;
+            /* Adding spacing between the icon and title */
+        }
+
+
+    }
+
+    .center-section {
+        .name {
+            color: $light-color;
+            text-transform: capitalize;
+            font-size: $title-font-size;
+            font-weight: $font-weight-semibold;
+        }
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: $space;
+
+        i {
+            font-size: 2em;
+            color: $light-color;
+            margin-right: 1rem;
+            /* Adding a small margin between the icon and title */
+        }
+    }
+
+}

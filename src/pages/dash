@@ -1,0 +1,115 @@
+       <div className="col s12 m6 l6">
+                            <div className="card">
+                                <div className="card-title">
+                                    {translate("income statement")} ({application.state.year})
+                                </div>
+                                <div className="payment-wrapper">
+
+                                    <div className="payment">
+                                        <div className="content">
+                                            <div className="icon bg-primary">
+                                                <Icon name="add_shopping_cart" />
+                                            </div>
+                                            <div className="detail">
+                                                <div className="title">
+                                                    {translate("gross profit")}
+                                                </div>
+                                                <div className="amount">
+                                                    {
+                                                        numeral(
+                                                            application.state.sale?.map((sale: any) => sale.total_amount)
+                                                                .reduce((a: number, b: number) => a + b, 0)  -
+                                                                application.state.purchase?.map((purchase: any) => purchase.total_amount)
+                                                                .reduce((a: number, b: number) => a + b, 0)
+                                                        ).format(application.state.currencyFormat)
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="payment">
+                                        <div className="content">
+                                            <div className="icon bg-success">
+                                                <Icon name="paid" />
+                                            </div>
+                                            <div className="detail">
+                                                <div className="title">
+                                                    {translate("net profit")}
+                                                </div>
+                                                <div className="amount">
+                                                    {
+                                                        numeral(
+                                                            (application.state.sale?.map((sale: any) => sale.total_amount)
+                                                                .reduce((a: number, b: number) => a + b, 0) -
+                                                                application.state.purchase?.map((purchase: any) => purchase.total_amount)
+                                                                    .reduce((a: number, b: number) => a + b, 0))
+                                                            -
+
+                                                            (getTotalAmount("expense") + getTotalAmount("payment"))
+
+                                                        ).format(application.state.currencyFormat)
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="payment">
+                                        <div className="content">
+                                            <div className="icon bg-info">
+                                                <Icon name="local_shipping" />
+                                            </div>
+                                            <div className="detail">
+                                                <div className="title">
+                                                    {translate("purchases")}
+                                                </div>
+                                                <div className="amount">
+                                                    {numeral(getTotalAmount("purchase")).format(application.state.currencyFormat)}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/* <div className="payment">
+                                        <div className="content">
+                                            <div className="icon bg-error">
+                                                <Icon name="money" />
+                                            </div>
+                                            <div className="detail">
+                                                <div className="title">
+                                                    {translate("unpaid expenses")}
+                                                </div>
+                                                <div className="amount">
+                                                    {
+                                                        numeral(
+                                                            application.state.expense?.map((expense: any) => expense.total_amount - expense.paid_amount)
+                                                                .reduce((a: number, b: number) => a + b, 0) + application.state.sale?.map((sale: any) => sale.discount)
+                                                                    .reduce((a: number, b: number) => a + b, 0)
+                                                        ).format(application.state.currencyFormat)
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="payment">
+                                        <div className="content">
+                                            <div className="icon bg-info">
+                                                <Icon name="local_shipping" />
+                                            </div>
+                                            <div className="detail">
+                                                <div className="title">
+                                                    {translate("unpaid purchases")}
+                                                </div>
+                                                <div className="amount">
+                                                    {
+                                                        numeral(
+                                                            application.state.purchase?.map((purchase: any) => purchase.total_amount - purchase.paid_amount)
+                                                                .reduce((a: number, b: number) => a + b, 0)
+                                                        ).format(application.state.currencyFormat)
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> */}
+                                </div>
+                            </div>
+                        </div>
